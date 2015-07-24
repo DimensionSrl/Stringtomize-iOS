@@ -17,4 +17,4 @@ FOUNDATION_EXPORT const unsigned char StringtomizeVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <Stringtomize/PublicHeader.h>
 
 #import "STBundle.h"
-#import "StringtomizeManager.h"
+#import "STManager.h"

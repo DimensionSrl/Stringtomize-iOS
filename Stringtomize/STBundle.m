@@ -1,5 +1,5 @@
 //
-//  Bundle+Stringtomize.m
+//  STBundle.m
 //  Stringtomize
 //
 //  Created by Matteo Gavagnin on 20/07/15.
@@ -9,7 +9,7 @@
 #import <objc/runtime.h>
 #import <Foundation/Foundation.h>
 #import "STBundle.h"
-#import "StringtomizeManager.h"
+#import "STManager.h"
 
 static const NSString* lang;
 static const char _bundle=0;
@@ -27,7 +27,7 @@ static const NSString* baseLanguage;
     
     // NSString *retVal = [super localizedStringForKey:key value:value table:tableName];
     
-    [[StringtomizeManager sharedInstance] stringtomizeKey:key value:value table:tableName];
+    [[STManager sharedInstance] stringtomizeKey:key value:value table:tableName];
     
     return retVal;
 }

@@ -1,6 +1,6 @@
 //
-//  Stringtomize.h
-//  StoryboardStringLocalizer
+//  STManager.h
+//  Stringtomize
 //
 //  Created by Matteo Gavagnin on 17/07/15.
 //  Copyright (c) 2015 DIMENSION. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StringtomizeManager : NSObject
+@interface STManager : NSObject
 
 + (id)sharedInstance;
 - (void)stringtomizeKey:(NSString *)key value:(NSString *)value table:(NSString *)tableName;

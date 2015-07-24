@@ -1,13 +1,13 @@
 //
-//  Stringtomize.m
-//  StoryboardStringLocalizer
+//  STManager.m
+//  Stringtomize
 //
 //  Created by Matteo Gavagnin on 17/07/15.
 //  Copyright (c) 2015 DIMENSION. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "StringtomizeManager.h"
+#import "STManager.h"
 #import "STBundle.h"
 
 static const NSString* bundleId;
@@ -16,12 +16,12 @@ static const NSString* build;
 
 NSString* stringtomizeAddress = @"127.0.0.1:3002";
 
-@implementation StringtomizeManager {
+@implementation STManager {
     
 }
 
 + (instancetype)sharedInstance {
-    static StringtomizeManager *sharedInstance = nil;
+    static STManager *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
@@ -66,10 +66,18 @@ NSString* stringtomizeAddress = @"127.0.0.1:3002";
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (self.verbose) {
+            if ([tableName isEqualToString:@""]) {
+                NSLog(@"Stringtomize: sent %@ = %@", key, value);
+            } else {
+                NSLog(@"Stringtomize: sent %@ = %@ (%@)", key, value, tableName);
+            }
+            
             // NSLog(@"%@", response);
             if (data) {
                 NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                NSLog(@"%@", string);
+                if (!([string isEqualToString:@"{}"] || [string isEqualToString:@""])) {
+                    NSLog(@"Stringtomize: %@", string);
+                }
             }
         }
     }];
@@ -177,10 +185,13 @@ NSString* stringtomizeAddress = @"127.0.0.1:3002";
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (self.verbose) {
+            NSLog(@"Stringtomize: Uploaded %@/%@", language, tableName);
             // NSLog(@"%@", response);
             if (data) {
                 NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                NSLog(@"%@", string);
+                if (!([string isEqualToString:@"{}"] || [string isEqualToString:@""])) {
+                    NSLog(@"Stringtomize: %@", string);
+                }
             }
         }
     }];

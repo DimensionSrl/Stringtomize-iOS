@@ -1,5 +1,5 @@
 //
-//  Bundle+Stringtomize.h
+//  STBundle.h
 //  Stringtomize
 //
 //  Created by Matteo Gavagnin on 20/07/15.

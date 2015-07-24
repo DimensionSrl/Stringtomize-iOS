@@ -10,8 +10,8 @@
 		951789E41B5CE0B300843AF3 /* Stringtomize.h in Headers */ = {isa = PBXBuildFile; fileRef = 951789E31B5CE0B300843AF3 /* Stringtomize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		951789EA1B5CE0B400843AF3 /* Stringtomize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951789DE1B5CE0B300843AF3 /* Stringtomize.framework */; };
 		951789F11B5CE0B400843AF3 /* StringtomizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 951789F01B5CE0B400843AF3 /* StringtomizeTests.m */; };
-		951789FE1B5CE0C300843AF3 /* StringtomizeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 951789FA1B5CE0C300843AF3 /* StringtomizeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		951789FF1B5CE0C300843AF3 /* StringtomizeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 951789FB1B5CE0C300843AF3 /* StringtomizeManager.m */; };
+		951789FE1B5CE0C300843AF3 /* STManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 951789FA1B5CE0C300843AF3 /* STManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		951789FF1B5CE0C300843AF3 /* STManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 951789FB1B5CE0C300843AF3 /* STManager.m */; };
 		95178A1B1B5D07EC00843AF3 /* STBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 95178A191B5D07EC00843AF3 /* STBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95178A1C1B5D07EC00843AF3 /* STBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 95178A1A1B5D07EC00843AF3 /* STBundle.m */; };
 /* End PBXBuildFile section */
@@ -33,8 +33,8 @@
 		951789E91B5CE0B400843AF3 /* StringtomizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringtomizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		951789EF1B5CE0B400843AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		951789F01B5CE0B400843AF3 /* StringtomizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringtomizeTests.m; sourceTree = "<group>"; };
-		951789FA1B5CE0C300843AF3 /* StringtomizeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringtomizeManager.h; sourceTree = "<group>"; };
-		951789FB1B5CE0C300843AF3 /* StringtomizeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringtomizeManager.m; sourceTree = "<group>"; };
+		951789FA1B5CE0C300843AF3 /* STManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STManager.h; sourceTree = "<group>"; };
+		951789FB1B5CE0C300843AF3 /* STManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STManager.m; sourceTree = "<group>"; };
 		95178A191B5D07EC00843AF3 /* STBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBundle.h; sourceTree = "<group>"; };
 		95178A1A1B5D07EC00843AF3 /* STBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBundle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				951789E31B5CE0B300843AF3 /* Stringtomize.h */,
-				951789FA1B5CE0C300843AF3 /* StringtomizeManager.h */,
-				951789FB1B5CE0C300843AF3 /* StringtomizeManager.m */,
+				951789FA1B5CE0C300843AF3 /* STManager.h */,
+				951789FB1B5CE0C300843AF3 /* STManager.m */,
 				95178A191B5D07EC00843AF3 /* STBundle.h */,
 				95178A1A1B5D07EC00843AF3 /* STBundle.m */,
 				951789E11B5CE0B300843AF3 /* Supporting Files */,
@@ -123,7 +123,7 @@
 			files = (
 				951789E41B5CE0B300843AF3 /* Stringtomize.h in Headers */,
 				95178A1B1B5D07EC00843AF3 /* STBundle.h in Headers */,
-				951789FE1B5CE0C300843AF3 /* StringtomizeManager.h in Headers */,
+				951789FE1B5CE0C300843AF3 /* STManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95178A1C1B5D07EC00843AF3 /* STBundle.m in Sources */,
-				951789FF1B5CE0C300843AF3 /* StringtomizeManager.m in Sources */,
+				951789FF1B5CE0C300843AF3 /* STManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
