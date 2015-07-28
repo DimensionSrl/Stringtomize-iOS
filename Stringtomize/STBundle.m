@@ -27,6 +27,10 @@ static const NSString* baseLanguage;
     
     // NSString *retVal = [super localizedStringForKey:key value:value table:tableName];
     
+    if (!value) {
+        value = retVal;
+    }
+    
     [[STManager sharedInstance] stringtomizeKey:key value:value table:tableName];
     
     return retVal;
