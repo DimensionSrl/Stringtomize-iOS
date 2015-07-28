@@ -162,7 +162,7 @@ NSString* stringtomizeAddress = @"127.0.0.1:3002";
     [fileDictionary enumerateKeysAndObjectsUsingBlock:^(NSString * key, NSString * value, BOOL *stop) {
         NSDictionary *phrase;
         if (translations) {
-            phrase = [[NSDictionary alloc] initWithObjects:@[value, key] forKeys:@[@"string", @"ios_identifier"]];
+            phrase = [[NSDictionary alloc] initWithObjects:@[value, key, tableName] forKeys:@[@"string", @"ios_identifier", @"table"]];
         } else {
             phrase = [[NSDictionary alloc] initWithObjects:@[value, key, tableName, version, build] forKeys:@[@"string", @"ios_identifier", @"table", @"version", @"build"]];
         }
