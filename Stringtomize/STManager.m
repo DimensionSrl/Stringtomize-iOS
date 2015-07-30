@@ -58,7 +58,7 @@ NSString* stringtomizeAddress = @"127.0.0.1:3002";
     if (tableName) {
         table = tableName;
     }
-    NSDictionary *phrase = [[NSDictionary alloc] initWithObjects:@[value, key, table, version, build] forKeys:@[@"string", @"ios_identifier", @"table", @"version", @"build"]];
+    NSDictionary *phrase = [[NSDictionary alloc] initWithObjects:@[value, key, table, [STBundle baseLanguage], version, build, @1] forKeys:@[@"string", @"identifier", @"path", @"base", @"version", @"build", @"platform"]];
     NSDictionary *root = [[NSDictionary alloc] initWithObjects:@[[NSNumber numberWithBool:self.verbose], phrase] forKeys:@[@"verbose", @"phrase"]];
     NSData *postData = [NSJSONSerialization dataWithJSONObject:root options:0 error:&error];
     [request setHTTPBody:postData];
@@ -162,9 +162,9 @@ NSString* stringtomizeAddress = @"127.0.0.1:3002";
     [fileDictionary enumerateKeysAndObjectsUsingBlock:^(NSString * key, NSString * value, BOOL *stop) {
         NSDictionary *phrase;
         if (translations) {
-            phrase = [[NSDictionary alloc] initWithObjects:@[value, key, tableName] forKeys:@[@"string", @"ios_identifier", @"table"]];
+            phrase = [[NSDictionary alloc] initWithObjects:@[value, key, tableName, language, @1] forKeys:@[@"string", @"identifier", @"path", @"base", @"platform"]];
         } else {
-            phrase = [[NSDictionary alloc] initWithObjects:@[value, key, tableName, version, build] forKeys:@[@"string", @"ios_identifier", @"table", @"version", @"build"]];
+            phrase = [[NSDictionary alloc] initWithObjects:@[value, key, tableName, language, @1, version, build] forKeys:@[@"string", @"identifier", @"path", @"base", @"platform", @"version", @"build"]];
         }
         [phrases addObject:phrase];
     }];
