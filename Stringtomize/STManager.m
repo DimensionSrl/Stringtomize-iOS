@@ -14,7 +14,7 @@ static const NSString* bundleId;
 static const NSString* version;
 static const NSString* build;
 
-NSString* stringtomizeAddress = @"127.0.0.1:3002";
+NSString* stringtomizeAddress = @"example.com";
 
 @implementation STManager {
     
