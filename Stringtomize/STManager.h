@@ -10,7 +10,7 @@
 
 @interface STManager : NSObject
 
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
 - (void)stringtomizeKey:(NSString *)key value:(NSString *)value table:(NSString *)tableName;
 - (void)uploadBaseLanguageStrings;
 - (void)uploadTranslationStrings;
